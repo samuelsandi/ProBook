@@ -1,0 +1,59 @@
+body{
+    margin:0;
+}
+
+header {
+    size:20%;
+    display:block;
+    font-size: 1.4em;
+    margin: 0;
+    background-color:aquamarine;
+    color:white;
+}
+
+header h1 {
+    display:inline-block;
+    height:60pt;
+    margin:0;
+    padding:5pt;
+}
+
+
+nav{
+    /*margin-top:1%;*/
+    font-size:1.4em;
+    background-color: darkturquoise;
+}
+
+.navoption {
+    display:block;
+    float:left;
+    width: 33.33%;
+    text-align: center;
+}
+
+nav::after{
+    content:"";
+    display: table;
+    clear:both;
+}
+
+#greet-user {
+    margin:0;
+    color: tomato;
+    float: right;
+}
+
+#logout {
+    margin:0;
+    color: white;
+    float: right;
+    margin:0;
+}
+
+
+#logout img {
+    margin:0pt;
+    padding:0pt;
+    height: 70pt;
+}
