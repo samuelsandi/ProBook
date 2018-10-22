@@ -20,16 +20,8 @@ header h1 {
 
 
 nav{
-    /*margin-top:1%;*/
     font-size:1.4em;
     background-color: darkturquoise;
-}
-
-.navoption {
-    display:block;
-    float:left;
-    width: 33.33%;
-    text-align: center;
 }
 
 nav::after{
@@ -38,22 +30,42 @@ nav::after{
     clear:both;
 }
 
+.navoption {
+    padding-top:0.5%;
+    padding-bottom: 0.5%;
+    display:block;
+    float:left;
+    width: 33%;
+    text-align: center;
+}
+
+.navoption:hover{
+    background-color: aqua;
+}
+
+#history {
+    border-left: 2pt solid black;
+    border-right: 2pt solid black;
+}
+
+
+
 #greet-user {
-    margin:0;
-    color: tomato;
+    margin-top: 10pt;
+    margin-right: 10pt;
+    text-decoration: underline;
+    color: white;
     float: right;
 }
 
 #logout {
     margin:0;
+    padding:0;
     color: white;
     float: right;
-    margin:0;
+    height: 70pt;
 }
 
-
-#logout img {
-    margin:0pt;
-    padding:0pt;
-    height: 70pt;
+#logout:hover {
+    lighting-color: aliceblue;
 }
