@@ -75,12 +75,6 @@ header nav::after{
     lighting-color: aliceblue;
 }
 
-.pagetitle {
-    color: rgb(242,102,0);
-    font-size: 2em;
-}
-
-.itemtitle {
-    color: rgb(242,102,0);
-    font-size: 1.3em;
+.thumbnail {
+    height: 100pt;
 }
