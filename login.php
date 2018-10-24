@@ -31,7 +31,7 @@ if (isset($_POST['username'])) {
 <html>
 <head>
     <title> Login</title>
-    <link rel="stylesheet" a href="login.css">
+    <link rel="stylesheet" a href="styles/login.css">
 </head>
 <body>
     <div class="container">
