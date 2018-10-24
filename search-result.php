@@ -3,15 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Search Result</title>
-    
-    <link rel="stylesheet" href="styles/page.css" />
     <link rel="stylesheet" href="styles/header.css" />
-    <style>
-        .thumbnail {
-            height: 100pt;
-            float:left;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/page.css" />
+    <link rel="stylesheet" href="styles/browse.css"/>
+
 </head>
 <body>
     <?php   
@@ -45,8 +40,18 @@
                 echo '<section>';
                 echo "<img class='thumbnail' src='data:image/jpeg;base64,".base64_encode($row['cover'])."'/>";
                 echo "<h2 class='itemtitle'>".$row['judul']." </h2>";
-                echo "<h3 class='itemsubtitle'>".$row['penulis']."</h3>";
-                //show data from database
+                echo "<h3 class='itemsubtitle'>".$row['penulis']." - ";
+                if ($row['rating'] != null) {
+                    echo $row['rating']."/5.0 (".$row['vote']." votes) </h3>";
+                } else {
+                    echo "not rated </h3>";
+                }
+                echo "<div> insert-synopsis </div>";
+                // details button
+                echo "<form class='rightitem' action='book-detail.php' method='GET'>";
+                echo "  <input type='hidden' name='book_id' value='".$row['id_buku']."'>";
+                echo "  <input type='submit' value='Details'> ";
+                echo "</form>";
                 echo '</section>';
             }
         }
