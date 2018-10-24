@@ -2,10 +2,16 @@
     background-color: rgb(242,102,0);
 }
 
+#bookdetail {
+    display:flex;
+    flex-direction: row;
+}
+
 #imgdetail {
     margin-right:5%;
     padding:10pt;
 }
+
 
 #searchbar {
     width: 90%;

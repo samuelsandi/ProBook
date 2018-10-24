@@ -1,5 +1,7 @@
 
 article {
+    display: flex;
+    flex-flow: column;
     padding: 5%;
     font-size: 1.4em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

@@ -16,6 +16,7 @@
 
         include('header.php');    
         echo "<article>";
+        echo "<section>";
         echo '<h1 class="pagetitle"> Search Result </h1>';
         // GET query
         $searchquery = $_GET['query'];
@@ -31,6 +32,7 @@
         if ($db->error) echo "Error " . $db->error;
         $count = $res->num_rows;
         echo "<div class='rightitem' id='resultcount'>Found <u>$count</u> Results </div>";
+        echo "</section>";
 
         if ($count == 0){
             echo '<section>No result</section>';
