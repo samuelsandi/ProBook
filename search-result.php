@@ -46,11 +46,11 @@
                 } else {
                     echo "not rated </h3>";
                 }
-                echo "<div> insert-synopsis </div>";
+                echo "<div>".$row['synopsis']." </div>";
                 // details button
                 echo "<form class='rightitem' action='book-detail.php' method='GET'>";
                 echo "  <input type='hidden' name='book_id' value='".$row['id_buku']."'>";
-                echo "  <input type='submit' value='Details'> ";
+                echo "  <input class='rightbutton' type='submit' value='Details'> ";
                 echo "</form>";
                 echo '</section>';
             }

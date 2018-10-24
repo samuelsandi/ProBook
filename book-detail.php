@@ -30,7 +30,7 @@
         echo "</div>";
         echo "<h1 class='pagetitle'>".$row['judul']."</h1>";
         echo "<h3 class='itemsubtitle'>".$row['penulis']."</h2>";
-        echo "<div> insert-synopsis </div>";
+        echo "<div>".$row['synopsis']."</div>";
         echo "</section>";
 
         // input order
@@ -41,7 +41,7 @@
         for ($i = 1; $i <= 20; $i++)
             echo "  <option value='$i'>$i</option>";
         echo "  </select>";
-        echo "  <input class='rightitem' type='submit' value='Order'>";
+        echo "  <input class='rightbutton' type='submit' value='Order'>";
         echo "</form>";
         echo "</section>";
         //get reviews

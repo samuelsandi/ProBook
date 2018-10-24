@@ -12,15 +12,15 @@
     <?php
         include('header.php');
     ?>
-    <section>
+    <article>
         <h1 class="pagetitle">Search book</h1>
 
         <form id ='search' action="search-result.php" method="GET">
             <input id='searchbar' type="text" name="query" placeholder="Input search items"><br>
-            <input type="submit" value="Search">
+            <input class='rightbutton' type="submit" value="Search">
         </form>
 
-    </section>
+    </article>
 
 </body>
 </html>
