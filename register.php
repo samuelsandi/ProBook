@@ -85,7 +85,7 @@
 			</div>
 		</div>
 		
-		<a href="">
+		<a href="login.php">
 			<br><br>Already have an account? <br><br>
 		</a>
 		
