@@ -1,4 +1,6 @@
 
+
+
 CREATE TABLE buku (
 		id_buku INT(6) AUTO_INCREMENT PRIMARY KEY,
 		judul varchar(50) NOT NULL,

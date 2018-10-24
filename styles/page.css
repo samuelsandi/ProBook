@@ -1,6 +1,9 @@
+
 article {
-    padding: 5%;
+    padding: 7%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 
 .rightitem {
     float: right;
@@ -16,16 +19,22 @@ article {
 .itemtitle {
     color: rgb(242,102,0);
     font-size: 1.5em;
+    margin-bottom: 0em;
 }
 
 .itemsubtitle {
-    color: darkgray;
+    color: rgb(80, 80, 80);
     font-size: 1.2em;
+    margin:0;
 }
 
 #resultcount {
     margin-top: 1.8em;
 }
 
+.thumbnail {
+    height: 100pt;
+    float:left;
+}
 
-
+/**/
