@@ -42,12 +42,12 @@
         } else {
             for ($i = 1; $i <= $count; $i++){
                 $row = $res->fetch_assoc();
-                echo '<section>';
+                echo "<section class='item'>";
                 echo "<img class='thumbnail' src='data:image/jpeg;base64,".base64_encode($row['cover'])."'/>";
-                echo "<h2 class='itemtitle'>".$row['judul']." </h2>";
+                echo "<div style='flex-grow:1'><h2 class='itemtitle'>".$row['judul']." </h2>";
                 echo "<h3 class='itemsubtitle'>".$row['penulis']." - ";
                 if ($row['rating'] != null) {
-                    echo $row['rating']."/5.0 (".$row['vote']." votes) </h3>";
+                    echo number_format($row['rating'], 1)."/5.0 (".$row['vote']." votes) </h3>";
                 } else {
                     echo "not rated </h3>";
                 }
@@ -56,7 +56,7 @@
                 echo "<form class='rightitem' action='book-detail.php' method='GET'>";
                 echo "  <input type='hidden' name='book_id' value='".$row['id_buku']."'>";
                 echo "  <input class='rightbutton' type='submit' value='Details'> ";
-                echo "</form>";
+                echo "</form></div>";
                 echo '</section>';
             }
         }

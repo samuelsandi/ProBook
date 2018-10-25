@@ -6,7 +6,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Search Result</title>
+    <title>Book Detail</title>
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/page.css" />
     <link rel="stylesheet" href="styles/browse.css"/>
@@ -54,17 +54,18 @@
         echo "  <input class='rightbutton' type='submit' value='Order'>";
         echo "</form>";
         echo "</section>";
+
         //get reviews
         echo "<section>";
         echo "<h2 class='sectiontitle'>Reviews</h2>";
-        /*
+        
         $sql = "SELECT * FROM reviews WHERE id_buku = $idbuku;";
         $results = $db->query($sql);
         for ($i = 0; $i < $results->num_rows; $i++){
             $row = $results->fetch_assoc();
             echo "reviews"
         }
-        */
+        
         echo "</section>";
         echo "</article>";
     ?>

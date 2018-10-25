@@ -8,7 +8,7 @@
     </section>
     <nav>
         <a class='navoption' id='browse' href='search-book.php'>BROWSE</a> 
-        <a class='navoption' id='history'>HISTORY</a> 
+        <a class='navoption' id='history' href='history.php'>HISTORY</a> 
         <a class='navoption' id='profile' href='profile.php'>PROFILE</a>
     </nav>
 </header>
