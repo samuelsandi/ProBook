@@ -23,16 +23,21 @@
         $result = $db->query($sql);
         if ($db->error) die($db->error);
         $row = $result->fetch_assoc();
-        echo "<section>";
-        echo "<div id='imgdetail' class='rightitem'> ";
-        echo "<img class='thumbnail' src='data:image/jpeg;base64,".base64_encode($row['cover'])."'/>";
-        echo "<br>rating";
+        echo "<section id='bookdetail'>";
+        
+        echo "<div>";
+        echo "  <h1 class='pagetitle'>".$row['judul']."</h1>";
+        echo "  <h3 class='itemsubtitle'>".$row['penulis']."</h2>";
+        echo "  <div>".$row['synopsis']."</div>";
         echo "</div>";
-        echo "<h1 class='pagetitle'>".$row['judul']."</h1>";
-        echo "<h3 class='itemsubtitle'>".$row['penulis']."</h2>";
-        echo "<div> insert-synopsis </div>";
+        echo "<div id='imgdetail' class='rightitem'> ";
+        echo "  <img class='thumbnail' src='data:image/jpeg;base64,".base64_encode($row['cover'])."'/>";
+        echo "  <br>rating";
+        echo "</div>";
+
         echo "</section>";
 
+        
         // input order
         echo "<section>";
         echo "<h2 class='sectiontitle'>Order</h2>";
@@ -41,7 +46,7 @@
         for ($i = 1; $i <= 20; $i++)
             echo "  <option value='$i'>$i</option>";
         echo "  </select>";
-        echo "  <input class='rightitem' type='submit' value='Order'>";
+        echo "  <input class='rightbutton' type='submit' value='Order'>";
         echo "</form>";
         echo "</section>";
         //get reviews

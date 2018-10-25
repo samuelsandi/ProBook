@@ -6,21 +6,21 @@
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/page.css"/>
     <link rel="stylesheet" href="styles/browse.css"/>
-    <!--<script src='scripts/search.js'></script>-->
+    <script src='scripts/search.js'></script>
 </head>
 <body>
     <?php
         include('header.php');
     ?>
-    <section>
+    <article>
         <h1 class="pagetitle">Search book</h1>
 
-        <form id ='search' action="search-result.php" method="GET">
+        <form name ='search' action="search-result.php" onsubmit="var x = validateForm('search', ['query']);return x;" method="GET">
             <input id='searchbar' type="text" name="query" placeholder="Input search items"><br>
-            <input type="submit" value="Search">
+            <input class='rightbutton' type="submit" value="Search">
         </form>
 
-    </section>
+    </article>
 
 </body>
 </html>
