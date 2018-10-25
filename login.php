@@ -5,14 +5,14 @@ $user="root";
 $password="";
 
 $con = mysqli_connect($host, $user, $password);
-mysqli_select_db($con, "wbd");
+mysqli_select_db($con, "probook");
 
 if (isset($_POST['username'])) {
     $uname=$_POST['username'];
     $password=$_POST['password'];
 
     if (($uname != "") && ($password != "")) {
-        $sql= mysqli_query($con, "select * from loginform where username='".$uname."'AND password='".$password."' limit 1");
+        $sql= mysqli_query($con, "select * from user where username='".$uname."'AND password='".$password."' limit 1");
 
         if(mysqli_num_rows($sql)==1){
             echo " You Have Successfully Logged in";
@@ -46,7 +46,7 @@ if (isset($_POST['username'])) {
                 <input type="password" name="password" placeholder="Enter your Password"/>
             </div>
             <div class="register">
-                <a href="register.php">Don't have an account?</a><br><br>
+                <a href="register.html">Don't have an account?</a><br><br>
             </div>
             <input type="submit" type="submit" value="LOGIN" class="button-login"/>
         </form>
