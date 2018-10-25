@@ -1,3 +1,6 @@
+<?php
+    include('control/redirect.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>

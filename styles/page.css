@@ -1,4 +1,7 @@
-
+body {
+    display: flex;
+    flex-direction: column;
+}
 article {
     display: flex;
     flex-flow: column;
