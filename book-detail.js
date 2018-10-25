@@ -7,6 +7,8 @@ async function postOrder(){
          alert(this.responseText);
         }
       };
+    var amount = document.forms['orderform']['amount'].value;
+    var book_id = document.forms['orderform']['book_id'].value;
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send('amount=1&book_id=1&user=dabid');
+    xhttp.send('amount='+amount+'&book_id='+book_id);
 }
