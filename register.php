@@ -73,9 +73,9 @@
 				</form>	
 			</div>
 		</div>
-		
+
 		<div class="row">
-			<div class="leftcolumn">
+            <div class="leftcolumn">
 				Phone Number  <br>
 			</div>
 			<div class="column">

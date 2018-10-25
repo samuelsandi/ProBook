@@ -3,7 +3,7 @@
 }
 
 h1 {
-		text-align:center;
+    text-align:center;
 }
 
 .column {
@@ -14,22 +14,22 @@ h1 {
 .leftcolumn {
     float: left;
     width: 50%;
-		text-align:right;
+    text-align:right;
 }
 
 .row:after {
     content: "";
     display: table;
     clear: both;
-		height:5%;
+    height:5%;
 }
 
 .button {
     background-color: #4CAF50; /* Green */
-		width:20%;
+    width:20%;
     border: none;
     color: white;
-		margin:auto;
+    margin:auto;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
