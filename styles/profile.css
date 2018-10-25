@@ -6,6 +6,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 60px;
     color: white;
+    position: relative;
 }
 
 .container2{
@@ -14,18 +15,34 @@
     font-size: 30px;
     color: black;
 }
+
+.container3{
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    color: black;
+    margin-left: 30px;
+}
 .profilepict{
-    size: 80px;
+    width:200px;
+    height: 200px;
     border:6px solid yellow;
     border-radius: 50%;
     margin-top: 30px;
+}
+
+.ppEdit{
+    width:200px;
+    height: 200px;
+    border:2px solid black;
+    margin-bottom: 20px;
 }
 
 #editIcon {
     height: 110px;
     width: 120px;
     position: absolute;
-    top: 110pt;
+    top: 0pt;
     right: 0pt;
     cursor: pointer;
 }
@@ -48,4 +65,65 @@
     position: sticky;
     left:35%;
     display: inline;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.left {
+  width: 18%;
+}
+
+.right {
+  width: 82%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input[type="text"]{
+    width: 500px;
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    resize: none;
+}
+
+input[type="file"]{
+    color: transparent;
+}
+
+.form-input{
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.button{
+    width: 100px;
+	height: 30px;
+	font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.back{
+    border:1px solid  tomato;
+    color: tomato;
+    background: white;
+    margin-top: 100px;
+}
+
+.save{
+    border:1px solid  rgb(0, 174, 239);
+    color: white;
+    background: rgb(0, 174, 239);
+    margin-left: 400px;
 }

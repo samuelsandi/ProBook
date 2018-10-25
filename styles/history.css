@@ -1,0 +1,14 @@
+#history {
+    background-color: rgb(242,102,0);
+}
+
+.transactiondetail {
+    color: rgb(80,80,80);
+    font-weight: bold;
+    text-align: right;
+}
+
+.transactionbook {
+    display: flex;
+    flex-direction: row;
+}
