@@ -15,14 +15,29 @@
         include('header.php');
     ?>
 
+    <?php
+        $host="localhost";
+        $user="root";
+        $password="";
+        
+        $con = new mysqli($host, $user, $password);
+        $con->query("USE probook;");
+
+        $uname = $_COOKIE['user'];
+        $result = $con->query("SELECT * from user where username='".$uname."' ;");
+        $row = $result->fetch_assoc();
+    ?>
+
     <h1 id="pagetitle">Edit Profile</h1>
     <div class="container3">
         <div class="row">
             <div class="column left">
-                <img class="ppEdit" src="database-setup/pp1.jpg" > <br/><br/>
+                <?php   
+                    echo '<img class="ppEdit" src="data:picture/jpeg;base64,'.base64_encode( $row['picture'] ).'"/>';
+                ?>
                 Name <br/><br/>
                 Address <br/><br/><br/><br/><br/>
-                Phone Number 
+                Phone Number <br/><br/><br/><br/>
         
                 <a class="button back" href="profile.php" style="text-decoration: none"> Back </a>
             </div>
@@ -34,7 +49,7 @@
 
                 <input type="text" name="name" placeholder="Enter your name" style="margin-bottom:15px"/> <br/>
                 <input type="text" name="address" placeholder="Enter your address" style="height:100px; margin-bottom:15px"/> <br/>
-                <input type="text" name="phonenumber" placeholder="Enter your phone number"/>
+                <input type="text" name="phonenumber" placeholder="Enter your phone number" style="margin-bottom:60px"/> <br/>
 
                 <a class="button save" href="test.php" style="text-decoration: none"> Save </a>
             </div>
