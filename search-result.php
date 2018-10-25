@@ -52,6 +52,7 @@
                     echo "not rated </h3>";
                 }
                 echo "<div>".$row['synopsis']." </div>";
+                
                 // details button
                 echo "<form class='rightitem' action='book-detail.php' method='GET'>";
                 echo "  <input type='hidden' name='book_id' value='".$row['id_buku']."'>";

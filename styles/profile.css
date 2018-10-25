@@ -6,6 +6,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 60px;
     color: white;
+    position: relative;
 }
 
 .container2{
@@ -41,7 +42,7 @@
     height: 110px;
     width: 120px;
     position: absolute;
-    top: 120pt;
+    top: 0pt;
     right: 0pt;
     cursor: pointer;
 }

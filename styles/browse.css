@@ -5,9 +5,12 @@
 #bookdetail {
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 #imgdetail {
+    display:flex;
+    flex-direction: column;
     margin-right:5%;
     padding:10pt;
 }
@@ -20,4 +23,21 @@
     padding: 2pt;
     border: 2pt solid rgb(120,120,120);
     border-radius: 3pt; 
+}
+
+.ratinguser {
+    display: flex;
+    flex-direction: row;
+}
+
+.reviewrating {
+    text-align:center;
+    margin-right:5%;
+}
+
+#dropdown {
+    margin:10pt;
+    font-size: 1em;
+    padding: 3pt;
+    
 }

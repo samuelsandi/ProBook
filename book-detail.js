@@ -1,7 +1,7 @@
 
 async function postOrder(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open('POST', 'book-order.php',true);
+    xhttp.open('POST', 'control/book-order.php',true);
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
          alert(this.responseText);

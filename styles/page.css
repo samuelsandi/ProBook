@@ -41,8 +41,8 @@ article {
 
 .itemsubtitle {
     color: rgb(80, 80, 80);
-    font-size: 1.2em;
-    margin:0;
+    font-size: 1.3em;
+    margin: 10pt 0;
 }
 
 #resultcount {
@@ -55,14 +55,15 @@ article {
     height: 120pt;
     width: 120pt;
     border: 1pt solid black; 
-    margin-right: 20pt;
+    margin: 12pt;
+    
     float: left;
 }
 
 
 .rightbutton {
     float:right;
-    margin-right:10%;
+    margin-right:5%;
     margin-top:15pt;
     padding-left: 20pt;
     padding-right: 20pt;
@@ -76,4 +77,17 @@ article {
     cursor: pointer;
 }
 
+.ratingstaricon {
+    margin: 10pt;
+    height: 70pt;
+}
+
+.ratingstarset {
+    display:flex;
+    flex-direction: row;
+}
+
+.ratingstarsmall {
+    height: 30pt;
+}
 /**/

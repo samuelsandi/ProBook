@@ -2,7 +2,7 @@
     <section>
         <h1><span id='pro'>Pro</span>-Book</h1>
         <section>
-            <div id='greet-user'>Hi, insert-username-here!</div>
+            <div id='greet-user'>Hi, <?php echo $_COOKIE['user']; ?></div>
             <a href='control/logout.php'><img id='logout' src="assets/logoff.PNG"></a>
         </section>
     </section>
