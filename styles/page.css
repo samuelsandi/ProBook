@@ -1,7 +1,15 @@
-
-article {
-    padding: 5%;
+body {
+    display: flex;
+    flex-direction: column;
 }
+article {
+    display: flex;
+    flex-flow: column;
+    padding: 5%;
+    font-size: 1.4em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 
 .rightitem {
     float: right;
@@ -11,7 +19,8 @@ article {
     display: inline-block;
     color: rgb(242,102,0);
     font-size: 3em;
-    margin-top: 0;
+    margin-top: 0pt;
+    margin-bottom: 10pt;
 }
 
 .itemtitle {
@@ -31,8 +40,13 @@ article {
 }
 
 .thumbnail {
-    height: 100pt;
+    object-fit: contain;
+    height: 120pt;
+    width: 120pt;
+    border: 1pt solid black; 
     float:left;
+    margin-right: 20pt;
 }
+
 
 /**/

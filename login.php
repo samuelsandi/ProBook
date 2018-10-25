@@ -4,23 +4,23 @@ $host="localhost";
 $user="root";
 $password="";
 
-$con = mysqli_connect($host, $user, $password);
-mysqli_select_db($con, "probook");
+$con = new mysqli($host, $user, $password);
+$con->query("USE probook;");
 
 if (isset($_POST['username'])) {
     $uname=$_POST['username'];
     $password=$_POST['password'];
 
     if (($uname != "") && ($password != "")) {
-        $sql= mysqli_query($con, "select * from user where username='".$uname."'AND password='".$password."' limit 1");
+        $sql = $con->query("SELECT * from user where username='".$uname."' AND password='".$password."';");
 
         if(mysqli_num_rows($sql)==1){
-            echo " You Have Successfully Logged in";
-            exit();
+            setcookie('user', $uname, 0, '/');
+            header("Location:search-book.php");
+            die();
         }
         else{
-            echo " You Have Entered Incorrect Password";
-            exit();
+            echo "<div class='alert' style='margin:auto;color:red;'> You Have Entered Incorrect Password <div>";
         }
     }
 }
