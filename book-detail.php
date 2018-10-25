@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/page.css" />
     <link rel="stylesheet" href="styles/browse.css"/>
-    <script src='book-detail.js'></script>
+    <link rel="stylesheet" href="styles/alertbox.css"/>
+    <script src='scripts/book-detail.js'></script>
 </head>
 <body>
     <?php

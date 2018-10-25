@@ -20,6 +20,5 @@
     $id_transaksi = $transaksi->fetch_assoc()['id_transaksi'];
 
     //kembalikan pesan berhasil
-    echo "Pemesanan berhasil!\n";
     echo "Nomor transaksi: $id_transaksi";
 ?>
