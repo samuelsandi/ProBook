@@ -9,6 +9,10 @@
         echo "<br><img src=\"assets/check.png\" width=\"15px\" height=\"15px\">";
         die();
     }
+    else{
+        echo "<br><img src=\"assets/cross.jpg\" width=\"15px\" height=\"15px\">";
+        die();
+    }
 
     mysqli_close($db);
     

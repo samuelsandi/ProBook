@@ -5,8 +5,12 @@
 
     $sql = $db->query("SELECT username FROM user WHERE username='".$username."'");
 
-    if (mysqli_num_rows($sql)==0) {
+    if ((mysqli_num_rows($sql)==0)&&(strlen($username)<=20)) {
         echo "<br><img src=\"assets/check.png\" width=\"15px\" height=\"15px\">";
+        die();
+    }
+    else{
+        echo "<br><img src=\"assets/cross.jpg\" width=\"15px\" height=\"15px\">";
         die();
     }
 
