@@ -1,17 +1,31 @@
-async function validateUsername(){
-    var xhttp = new XMLHttpRequest();
-    xhttp.open('POST', 'control/book-order.php',true);
+function validateUsername(str){
+    var xhttp;
+    if (str.length == 0) { 
+        document.getElementById("uncon").innerHTML = "";
+        return;
+    }
+    xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-         showNotification(this.responseText);
+            document.getElementById("uncon").innerHTML=this.responseText;
         }
       };
-    var amount = document.forms['orderform']['amount'].value;
-    var book_id = document.forms['orderform']['book_id'].value;
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send('amount='+amount+'&book_id='+book_id);
+    xhttp.open("GET", "control/valusername.php?q="+str, true);
+    xhttp.send();
 }
 
-async function validateEmail(){
-    
+function validateEmail(str){
+    var xhttp;
+    if (str.length == 0) { 
+        document.getElementById("emcon").innerHTML = "";
+        return;
+    }
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("uncon").innerHTML=this.responseText;
+        }
+      };
+    xhttp.open("GET", "control/valusername.php?q="+str, true);
+    xhttp.send();
 }
