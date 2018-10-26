@@ -1,5 +1,11 @@
 <?php
     include('control/redirect.php');
+    $db = new mysqli("localhost", "root", "", "probook");
+    $res = $db->query("SELECT username FROM transaksi WHERE id_transaksi=".$_GET['id_transaksi'].";");  
+    if ($res->fetch_assoc()['username'] != $_COOKIE['user']) {
+        header('Location:history.php');
+        die();
+    }
 ?>
 
 <!DOCTYPE html>
