@@ -27,19 +27,23 @@
             if((strlen($phone_number)>=9)&&(strlen($phone_number)<=12)){
                 if(strlen($uname)<=20){
                     $sql = $conn->query("SELECT * from user where username='".$uname."' OR email='".$email."';");
-
                     if(mysqli_num_rows($sql)==0){
-                        $sql="INSERT INTO user (username, password, nama, telepon, email, alamat) VALUES ('".$uname."', '".$password."', '".$name."', '".$phone_number."', '".$email."', '".$address."');";
+                        if (filter_var($email, FILTER_VALIDATE_EMAIL)){
+                            $sql="INSERT INTO user (username, password, nama, telepon, email, alamat) VALUES ('".$uname."', '".$password."', '".$name."', '".$phone_number."', '".$email."', '".$address."');";
 
-                        if ($conn->query($sql) === TRUE) {
-                            echo "New record created successfully";
-                        } else {
-                            echo "Error: " . $sql . "<br>" . $conn->error;
+                            if ($conn->query($sql) === TRUE) {
+                                echo "New record created successfully";
+                            } else {
+                                echo "Error: " . $sql . "<br>" . $conn->error;
+                            }
+
+                            setcookie('user', $uname, time()+3600, '/');
+                            header("Location:search-book.php");
+                            die();
                         }
-
-                        setcookie('user', $uname, time()+3600, '/');
-                        header("Location:search-book.php");
-                        die();
+                        else{
+                            echo "<div style='color:red;'> Wrong email address.</div>";
+                        }
                     }
                     else{
                         echo "<div style='color:red;'> Username or email has already taken.</div>";

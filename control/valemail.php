@@ -5,7 +5,7 @@
 
     $sql = $db->query("SELECT email FROM user WHERE email='".$email."'");
 
-    if (mysqli_num_rows($sql)==0) {
+    if ((mysqli_num_rows($sql)==0)&&(filter_var($email, FILTER_VALIDATE_EMAIL))) {
         echo "<br><img src=\"assets/check.png\" width=\"15px\" height=\"15px\">";
         die();
     }
