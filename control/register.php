@@ -1,15 +1,24 @@
 <?php
-    $username = $_POST['user'];
-    $password = $_POST['password'];
+    $name=$_POST['name'];
+    $username=$_POST['username'];
+    $email=$_POST['email'];
+    $password=$_POST['password'];
+    $address=$_POST['address'];
+    $phone_number=$_POST['phone_number'];
     $db = new mysqli("localhost", "root", "");
     $db->query("USE probook");
-    $result = $db->query("SELECT username, password FROM user WHERE username='$username' AND password='$password';");
-    if ($result->num_rows == 1) {
-        setcookie("user", $username, time()+3600, '/');
-        header('Location:search-book.php');
-        die();
-    } else {
-        header('Location:register.php');
-        die();
+    if (($name != "")&&($uname != "")&&($email != "")&&($password != "")&&($conpass != "")&&($address != "")&&($phone_number != "")&&($password == $conpass)) {
+        
+        $result = $db->query("SELECT * from user where username='".$uname."' OR email='".$email."';");
+        
+        if ($result->num_rows == 0) {
+            $db->query("INSERT INTO user ('username', 'password', 'nama', 'telepon', 'email', 'alamat') VALUES ('".$username."', '".$password."', '".$name."', '".$phone_number."', '".$email."', '".$address."';");
+            setcookie("user", $username, time()+3600, '/');
+            header('Location:search-book.php');
+            die();
+        } else {
+            header('Location:register.php');
+            die();
+        }
     }
 ?>
