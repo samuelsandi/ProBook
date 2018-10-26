@@ -12,9 +12,7 @@
 <body>
     <?php
         include('header.php');
-    ?>
 
-    <?php
         $host="localhost";
         $user="root";
         $password="";
@@ -26,6 +24,10 @@
         $result = $con->query("SELECT * from user where username='".$uname."' ;");
         $row = $result->fetch_assoc();
     ?>
+    
+    <script 
+        src="scripts/preview.js">
+    </script>
 
     <h1 id="pagetitle">Edit Profile</h1>
     <div class="container3">
@@ -45,7 +47,6 @@
                 <form name='profile' action="control/updateprofile.php" method="POST" enctype="multipart/form-data" onsubmit="var x = validateForm('profile', ['name', 'address', 'phonenumber']);return x;">
                     <div>
                         <input id='imagename' type="text" name="imgaddress" style="margin-bottom:125px"/>
-                        <script src="scripts/preview.js"></script>
                         <input id='imageup' type="file" name="imgupload" accept="image/*" onchange="preview_image(event)">
                     </div>
                     <input type="text" name="name" value="<?php echo $row['nama'] ?>" placeholder="Enter your name" style="margin-bottom:15px"/> <br/>

@@ -7,19 +7,11 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/profile.css"/>
-    <style> 
-        #profile {
-            background-color: rgb(242,102,0);
-        }
-    </style>
 </head>
 <body>
     <?php
         include('header.php');
-    ?>
-
-    <!-- Select information of user -->
-    <?php
+    
         $host="localhost";
         $user="root";
         $password="";
