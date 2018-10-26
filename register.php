@@ -26,7 +26,7 @@ if (isset($_POST['username'])) {
             die();
         }
         else{
-            echo "<div class='alert' style='margin:auto;color:red;'> Username or email has already taken. <div>";
+            echo "<div class='alert' style='color:red;'> Username or email has already taken. <div>";
         }
     }
     else{
@@ -34,7 +34,7 @@ if (isset($_POST['username'])) {
             echo "<div class='alert' style='margin:auto;color:red;'> These forms cannot be empty.   <div>";
         }
         else{
-            echo "<div class='alert' style='margin:auto;color:red;'> Wrong password confirmation.   <div>";
+            echo "<div class='alert' style='color:red;'> Wrong password confirmation.   <div>";
         }
         
     }
