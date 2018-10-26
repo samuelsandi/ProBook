@@ -8,10 +8,12 @@
     $user="root";
     $password="";
 
-    $con = new mysqli($host, $user, $password);
-    $con->query("USE probook;");
+    $conn = new mysqli($host, $user, $password, 'probook');
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
 
-    if (isset($_POST['username'])) {
+    if (isset($_POST['reg'])) {
         $name=$_POST['name'];
         $uname=$_POST['username'];
         $email=$_POST['email'];
@@ -21,10 +23,18 @@
         $phone_number=$_POST['phone_number'];
 
         if (($name != "")&&($uname != "")&&($email != "")&&($password != "")&&($conpass != "")&&($address != "")&&($phone_number != "")&&($password == $conpass)) {
-            $sql = $con->query("SELECT * from user where username='".$uname."' OR email='".$email."';");
+            $sql = $conn->query("SELECT * from user where username='".$uname."' OR email='".$email."';");
 
             if(mysqli_num_rows($sql)==0){
-                setcookie('user', $uname, 0, '/');
+                $sql="INSERT INTO user (username, password, nama, telepon, email, alamat) VALUES ('".$uname."', '".$password."', '".$name."', '".$phone_number."', '".$email."', '".$address."');";
+                
+                if ($conn->query($sql) === TRUE) {
+                    echo "New record created successfully";
+                } else {
+                    echo "Error: " . $sql . "<br>" . $conn->error;
+                }
+                
+                setcookie('user', $uname, time()+3600, '/');
                 header("Location:search-book.php");
                 die();
             }
@@ -124,7 +134,7 @@
                     <br><br>
                 </div>
                 
-                <input type="submit" type="submit" value="REGISTER" class="button-register"/>
+                <input type="submit" value="REGISTER" name="reg" class="button-register"/>
              </form>
         </div>
 	</body>
