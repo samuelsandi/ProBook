@@ -1,0 +1,17 @@
+async function validateUsername(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('POST', 'control/book-order.php',true);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+         showNotification(this.responseText);
+        }
+      };
+    var amount = document.forms['orderform']['amount'].value;
+    var book_id = document.forms['orderform']['book_id'].value;
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send('amount='+amount+'&book_id='+book_id);
+}
+
+async function validateEmail(){
+    
+}

@@ -77,7 +77,7 @@
                         <br>Username
                     </div>
                     <div class="form-input">
-                        <input type="text" name="username">
+                        <input type="text" name="username" onkeypress="validateUsername()">
                     </div>
                 </div>
 
@@ -86,7 +86,7 @@
                         <br>Email 
                     </div>
                     <div class="form-input">
-                        <input type="text" name="email">
+                        <input type="text" name="email" onkeypress="validateEmail()">
                     </div>
                 </div>
 
@@ -113,7 +113,8 @@
                         <br>Address  
                     </div>
                     <div class="form-input">
-                        <input type="text" name="address">
+                        <textarea name="address" 
+                        style="width:200px;height:70px;"></textarea>
                     </div>
                 </div>
 
