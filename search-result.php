@@ -34,7 +34,7 @@
 
         if ($db->error) echo "Error " . $db->error;
         $count = $res->num_rows;
-        echo "<div class='rightitem' id='resultcount'>Found <u>$count</u> Results </div>";
+        echo "<div class='rightitem' id='resultcount'>Found <u>$count</u> Result(s) </div>";
         echo "</section>";
 
         if ($count == 0){
