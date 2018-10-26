@@ -59,7 +59,7 @@
                 echo date("d F Y", strtotime($row['tanggal']));
                 echo "<br> Nomor Order: #".$row['id_transaksi'];
                 if ($review->num_rows==0){
-                    echo "<br><br><form class='rightitem' action='book-detail.php' method='GET'>";
+                    echo "<br><br><form class='rightitem' action='review.php' method='GET'>";
                     echo "  <input type='hidden' name='id_transaksi' value='".$row['id_transaksi']."'>";
                     echo "  <input class='rightbutton' type='submit' value='Review'> ";
                     echo "</form>";
