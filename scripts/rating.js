@@ -11,6 +11,7 @@ function validateAndSend() {
     }
 }
 
+
 function setRating(num) {
     document.forms['reviewform']['rating'].value = num;
     var starset = document.getElementsByClassName('ratingstarset')[0];
