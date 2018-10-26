@@ -52,12 +52,10 @@ article {
 .thumbnail {
     display: inline-block;
     object-fit: contain;
-    height: 120pt;
-    width: 120pt;
+    height: 250px;
+    width: 250px;
     border: 1pt solid black; 
     margin: 12pt;
-    
-    float: left;
 }
 
 
@@ -77,6 +75,22 @@ article {
     cursor: pointer;
 }
 
+.leftbutton {
+    float:left;
+    margin-left:5%;
+    margin-top:15pt;
+    padding-left: 20pt;
+    padding-right: 20pt;
+    padding-top: 5pt;
+    padding-bottom: 5pt;
+    font-size: 1em; 
+    color:  rgb(242,102,0);
+    border: 1.5pt solid  rgb(242,102,0);
+    text-decoration: none;
+    border-radius: 3pt;
+    cursor: pointer;
+}
+
 .ratingstaricon {
     margin: 10pt;
     height: 70pt;
@@ -85,6 +99,7 @@ article {
 .ratingstarset {
     display:flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .ratingstarsmall {

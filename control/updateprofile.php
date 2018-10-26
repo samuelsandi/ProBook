@@ -17,7 +17,7 @@
     
     $db->query($sql);
     if ($db->error) {
-        die($db->error);
+        die("Profile update failed. ".$db->error);
     }
 
     header("Location: ../profile.php");
