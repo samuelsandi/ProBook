@@ -113,8 +113,6 @@ input[type="file"]{
 }
 
 .button{
-    width: 100px;
-	height: 30px;
 	font-size: 25px;
     padding: 5px;
     cursor: pointer;

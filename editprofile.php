@@ -46,18 +46,15 @@
             </div>
             <div class="column right"><br/><br/>
                 Update profile picture<br/>
-                <form method="POST" action="#">
-                    <form action="" method="POST" enctype="multipart/form-data">
-                        <input type="text" name="pictLocation" placeholder="Enter file location"/>
-                        <button id="files" onclick="document.getElementById('file').click(); return false;"> Browse... </button>
-                        <input type="file" name="picture" id="file" style="visibility:hidden; margin-bottom:130px">
-                    </form>
+                <form action="control/updateprofile.php" method="POST">
+                <input type="text" name="pictLocation" placeholder="Enter file location"/>
+                <button id="files" onclick="document.getElementById('file').click(); return false;"> Browse... </button>
+                <input type="file" id="file"  style="visibility:hidden; margin-bottom:130px">
+                <input type="text" name="name" value="<?php echo $row['nama'] ?>" placeholder="Enter your name" style="margin-bottom:15px"/> <br/>
+                <input type="text" name="address" value="<?php echo $row['alamat']?>" placeholder="Enter your address" style="height:100px; margin-bottom:15px"/> <br/>
+                <input type="text" name="phonenumber" value="<?php echo $row['telepon']?>" placeholder="Enter your phone number" style="margin-bottom:60px"/> <br/>
 
-                    <input type="text" name="name" placeholder="Enter your name" style="margin-bottom:15px"/> <br/>
-                    <textarea name="address" placeholder="Enter your address" class="address"/></textarea> <br/>
-                    <input type="text" name="phonenumber" placeholder="Enter your phone number" style="margin-bottom:64px"/> <br/>
-
-                    <input type="submit" value="Save" class="button save">
+                <input class="button save" type="submit" style="text-decoration: none" value="Save">
                 </form>
             </div>
         </div>
