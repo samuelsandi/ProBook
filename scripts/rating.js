@@ -1,7 +1,7 @@
 function validateAndSend() {
-    if (document.forms['reviewform']['rating'] == '') {
+    if (document.forms['reviewform']['rating'].value == '') {
         alert('Invalid rating');
-    } else if (document.forms['reviewform']['comment'] == ''){
+    } else if (document.forms['reviewform']['comment'].value == ''){
         alert('Please insert a comment');
     } else {
         var form = document.forms['reviewform'];
