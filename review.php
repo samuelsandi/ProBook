@@ -53,7 +53,7 @@
         echo "<form name='reviewform'>";
         echo "  <input type='hidden' name='rating' value=''>";
         echo "  <input type='hidden' name='id_transaksi' value='".$_GET['id_transaksi']."'>";
-        echo "  <textarea rows='5' placeholder='Insert comment here'></textarea>";
+        echo "  <textarea rows='5' name='comment' placeholder='Insert comment here'></textarea>";
         echo "  <div class='navbuttons'><a class='leftbutton' href='history.php'>Back</a>";
         echo "  <input class='rightbutton' type='submit' value='Submit' onclick='validateAndSend()'></div>";
         echo "</form>";
