@@ -24,23 +24,33 @@
         $phone_number=$_POST['phone_number'];
 
         if (($name != "")&&($uname != "")&&($email != "")&&($password != "")&&($conpass != "")&&($address != "")&&($phone_number != "")&&($password == $conpass)) {
-            $sql = $conn->query("SELECT * from user where username='".$uname."' OR email='".$email."';");
+            if((strlen($phone_number)>=9)&&(strlen($phone_number)<=12)){
+                if(strlen($uname)<=20){
+                    $sql = $conn->query("SELECT * from user where username='".$uname."' OR email='".$email."';");
 
-            if(mysqli_num_rows($sql)==0){
-                $sql="INSERT INTO user (username, password, nama, telepon, email, alamat) VALUES ('".$uname."', '".$password."', '".$name."', '".$phone_number."', '".$email."', '".$address."');";
-                
-                if ($conn->query($sql) === TRUE) {
-                    echo "New record created successfully";
-                } else {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
+                    if(mysqli_num_rows($sql)==0){
+                        $sql="INSERT INTO user (username, password, nama, telepon, email, alamat) VALUES ('".$uname."', '".$password."', '".$name."', '".$phone_number."', '".$email."', '".$address."');";
+
+                        if ($conn->query($sql) === TRUE) {
+                            echo "New record created successfully";
+                        } else {
+                            echo "Error: " . $sql . "<br>" . $conn->error;
+                        }
+
+                        setcookie('user', $uname, time()+3600, '/');
+                        header("Location:search-book.php");
+                        die();
+                    }
+                    else{
+                        echo "<div style='color:red;'> Username or email has already taken.</div>";
+                    }  
                 }
-                
-                setcookie('user', $uname, time()+3600, '/');
-                header("Location:search-book.php");
-                die();
+                else{
+                    echo "<div style='color:red;'> Maximum length of username is 20 characters.</div>";
+                }
             }
             else{
-                echo "<div style='color:red;'> Username or email has already taken.</div>";
+                echo "<div style='color:red;'> Phone number must be 9-12 numbers.</div>";
             }
         }
         else{
