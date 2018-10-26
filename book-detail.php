@@ -35,9 +35,9 @@
         echo "  <h1 class='pagetitle'>".$row['judul']."</h1>";
         echo "  <h3 class='itemsubtitle'>".$row['penulis']."</h2>";
         echo "  <div>".$row['synopsis']."</div>";
-
-        //picture and rating
         echo "</div>";
+        
+        //picture and rating
         echo "  <div id='imgdetail' class='rightitem'> ";
         echo "      <img class='thumbnail' src='data:image/jpeg;base64,".base64_encode($row['cover'])."'/>";
         echo "      <div class='ratingstarset'>";
