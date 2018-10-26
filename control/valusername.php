@@ -6,7 +6,7 @@
     $sql = $db->query("SELECT username FROM user WHERE username='".$username."'");
 
     if (mysqli_num_rows($sql)==0) {
-        echo "A";
+        echo "<br><img src=\"assets/check.png\" width=\"15px\" height=\"15px\">";
         die();
     }
 

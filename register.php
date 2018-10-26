@@ -79,7 +79,7 @@
                     </div>
                     <div class="form-input">
                         <input type="text" name="username" style="width:170px" align="right" onkeyup="validateUsername(this.value)">
-                        <div id="uncon"> 
+                        <div class="check" id="uncon"> 
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                     </div>
                     <div class="form-input">
                         <input type="text" name="email" style="width:170px" align="right" onkeyup="validateEmail(this.value)">
-                        <div id="emcon">
+                        <div class="check" id="emcon">
                         </div>
                     </div>
                 </div>
