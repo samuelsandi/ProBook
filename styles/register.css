@@ -28,7 +28,9 @@ h1 {
     border-width: 35px 5px 35px 5px;
     padding: 25px;
 	text-align: center;
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url('../assets/backpattern.jpg');
+    background-repeat: repeat;
 }
 
 input[type="text"],input[type="password"]{
