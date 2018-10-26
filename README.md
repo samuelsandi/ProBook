@@ -6,9 +6,9 @@ Pro-Book Bookstore adalah sebuah aplikasi aplikasi *toko buku online* **berbasis
 
 ## Anggota Tim
 Pengembang aplikasi terdiri dari 3 orang yaitu:
-*Gloryanson Ginting - 13516060
-*Samuel Sandi Kristianto Lim - 13516069
-*David Timothy Panjaitan - 13516075
+1. Gloryanson Ginting - 13516060
+2. Samuel Sandi Kristianto Lim - 13516069
+3. David Timothy Panjaitan - 13516075
 
 ## Spesifikasi
 
@@ -81,15 +81,24 @@ Pada halaman ini, pengguna dapat memberikan review untuk buku yang dipesan berup
 ### Pembagian Tugas
 
 **Tampilan**
-1. Login : 
+1. Login : 13516060
 2. Register : 13516069
-3. Lanjutkan ...
+3. Search-Book : 13516075
+4. History : 13516075
+5. Review : 13516075
+6. Book-detail : 13516075
+7. Profile : 13516060
+8. Edit-Profile : 13516060
 
 **Fungsionalitas**
-1. Login : 
+1. Login : 13516060
 2. Register : 13516069
-3. Fungsionalitas : 
-4. Lanjutkan...
+3. Search-Book : 13516075
+4. History : 13516075
+5. Review : 13516075
+6. Book-detail : 13516075
+7. Profile : 13516060
+8. Edit-Profile : 13516060
 
 ## About
 
