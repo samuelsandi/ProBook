@@ -1,4 +1,18 @@
-<?php/*
+<?php
+    $username = $_REQUEST["q"];
+
+    $db = new mysqli('localhost', 'root', '', 'probook');
+
+    $sql = $db->query("SELECT username FROM user WHERE username='".$username."'");
+
+    if (mysqli_num_rows($sql)==0) {
+        echo "A";
+        die();
+    }
+
+    mysqli_close($db);
+    
+/*
 
     $name=$_POST['name'];
     $username=$_POST['username'];

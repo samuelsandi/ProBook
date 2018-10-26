@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<link rel="stylesheet" type="text/css" href="styles/register.css">
+    <script src="scripts/validate.js"></script>
     
     <?php 
 
@@ -62,10 +63,10 @@
 	<body>
         <div class="box">
             <h1>REGISTER</h1>
-            <form method="POST" action="#">        
+            <form method="POST" action="#" name="bigform">        
                 <div class="row">
                     <div class="leftcolumn">
-                        <br>Name
+                        <br>Name &nbsp;&nbsp;  
                     </div>
                     <div class="form-input">
                             <input type="text" name="name"><br>
@@ -74,25 +75,29 @@
 
                 <div class="row">
                     <div class="leftcolumn">
-                        <br>Username
+                        <br>Username &nbsp;&nbsp;  
                     </div>
                     <div class="form-input">
-                        <input type="text" name="username">
+                        <input type="text" name="username" style="width:170px" align="right" onkeyup="validateUsername(this.value)">
+                        <div id="uncon"> 
+                        </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="leftcolumn">
-                        <br>Email 
+                        <br>Email &nbsp;&nbsp;  
                     </div>
                     <div class="form-input">
-                        <input type="text" name="email">
+                        <input type="text" name="email" style="width:170px" align="right" onkeyup="validateEmail(this.value)">
+                        <div id="emcon">
+                        </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="leftcolumn">
-                        <br>Password 
+                        <br>Password &nbsp;&nbsp; 
                     </div>
                     <div class="form-input">
                         <input type="password" name="password">
@@ -101,7 +106,7 @@
 
                 <div class="row">
                     <div class="leftcolumn">
-                        <br>Confirm Password  
+                        <br>Confirm Password &nbsp;&nbsp;  
                     </div>
                     <div class="form-input">
                         <input type="password" name="password2">
@@ -110,16 +115,17 @@
 
                 <div class="row">
                     <div class="leftcolumn">
-                        <br>Address  
+                        <br>Address &nbsp;&nbsp;  
                     </div>
                     <div class="form-input">
-                        <input type="text" name="address">
+                        <textarea name="address" 
+                        style="width:200px;height:70px;"></textarea>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="leftcolumn">
-                        <br>Phone Number 
+                        <br>Phone Number &nbsp;&nbsp; 
                     </div>
                     <div class="form-input">
                         <input type="text" name="phone_number">
