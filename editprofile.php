@@ -36,7 +36,7 @@
         <div class="row">
             <div class="column left">
                 <?php   
-                    echo '<img class="ppEdit" src="data:picture/jpeg;base64,'.base64_encode( $row['picture'] ).'"/>';
+                    echo '<img id="output_image" class="ppEdit" src="data:picture/jpeg;base64,'.base64_encode( $row['picture'] ).'"/>';
                 ?>
                 Name <br/><br/>
                 Address <br/><br/><br/><br/><br/>
@@ -46,15 +46,17 @@
             </div>
             <div class="column right"><br/><br/>
                 Update profile picture<br/>
-                <form action="control/updateprofile.php" method="POST">
-                <input type="text" name="pictLocation" placeholder="Enter file location"/>
-                <button id="files" onclick="document.getElementById('file').click(); return false;"> Browse... </button>
-                <input type="file" id="file"  style="visibility:hidden; margin-bottom:130px">
-                <input type="text" name="name" value="<?php echo $row['nama'] ?>" placeholder="Enter your name" style="margin-bottom:15px"/> <br/>
-                <input type="text" name="address" value="<?php echo $row['alamat']?>" placeholder="Enter your address" style="height:100px; margin-bottom:15px"/> <br/>
-                <input type="text" name="phonenumber" value="<?php echo $row['telepon']?>" placeholder="Enter your phone number" style="margin-bottom:60px"/> <br/>
+                <form action="control/updateprofile.php" method="POST" enctype="multipart/form-data">
+                    <div>
+                        <input type="text" name="imgaddress" style="margin-bottom:125px"/>
+                        <script src="scripts/preview.js"></script>
+                        <input type="file" name="imgupload" accept="image/*" onchange="preview_image(event)">
+                    </div>
+                    <input type="text" name="name" value="<?php echo $row['nama'] ?>" placeholder="Enter your name" style="margin-bottom:15px"/> <br/>
+                    <textarea name="address" placeholder="Enter your address" class="address"/><?php echo $row['alamat']?></textarea> <br/>
+                    <input type="text" name="phonenumber" value="<?php echo $row['telepon']?>" placeholder="Enter your phone number" style="margin-bottom:60px"/> <br/>
 
-                <input class="button save" type="submit" style="text-decoration: none" value="Save">
+                    <input class="button save" type="submit" style="text-decoration: none" value="Save" name="submit">
                 </form>
             </div>
         </div>
