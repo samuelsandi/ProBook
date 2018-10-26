@@ -41,8 +41,8 @@
         echo "  <div id='imgdetail' class='rightitem'> ";
         echo "      <img class='thumbnail' src='data:image/jpeg;base64,".base64_encode($row['cover'])."'/>";
         echo "      <div class='ratingstarset'>";
-        for ($i = 0; $i < 5; $i++){
-            $star = $i < $row['rating'] ? "star.png" : "star-empty.png";
+        for ($i = 1; $i <= 5; $i++){
+            $star = $i <= $row['rating'] ? "star.png" : "star-empty.png";
             echo "      <img class='ratingstarsmall' src='assets/$star'>";
         }
         echo "  </div>";
