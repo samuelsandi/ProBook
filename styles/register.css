@@ -12,6 +12,10 @@ h1 {
     text-align:right;
 }
 
+.check {
+    float:right;
+}
+
 .row:after {
     content: "";
     display: table;
